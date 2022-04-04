@@ -1,0 +1,23 @@
+:root {
+
+  --cinza1: rgb(62, 66, 75);
+
+}
+
+.wallet-section h2 {
+  color: white;
+  text-align: center;
+}
+
+.wallet-section .loading {
+  color: var(--cinza1);
+  font-family: Fredoka One, cursive;
+  font-size: 24px;
+  margin: 16px;
+  text-align: center;
+}
+
+.wallet-section .erro-api {
+  font-family: Fredoka One, cursive;
+  font-size: 24px;
+}

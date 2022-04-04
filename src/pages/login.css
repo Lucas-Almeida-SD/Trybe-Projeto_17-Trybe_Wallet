@@ -1,0 +1,73 @@
+.login-section {
+  display: flex;
+  justify-content: center;
+}
+
+.login-section form {
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 12px white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 30px 0;
+  width: 500px;
+}
+
+.login-section form .logo-div {
+  align-items: center;
+  display: flex;
+  margin: 16px;
+}
+
+.login-section form img {
+  width: 100px;
+}
+
+.login-section form h1 {
+  font-family: Fredoka One, cursive;
+}
+
+.login-section form .mb-3 {
+
+  /* stylelint-disable-next-line declaration-no-important */
+  margin-bottom: 8px ! important;
+}
+
+.login-section form input {
+  font-family: Acme, sans-serif;
+  width: 250px;
+}
+
+.login-section form button {
+  background-color: rgb(208, 208, 208);
+  border: none;
+  border-radius: 4px;
+  font-family: Acme, sans-serif;
+  padding: 4px 0;
+  width: 200px;
+}
+
+.login-section form button:enabled {
+  background-color: rgb(42, 175, 45);
+}
+
+.login-section form button:enabled:hover {
+  transform: scale(1.1);
+}
+
+@media screen and ( max-width : 550px ) {
+
+  .login-section form {
+    padding-bottom: 24px;
+    padding-top: 16px;
+    width: 350px;
+  }
+
+  .login-section form .logo-div {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+}

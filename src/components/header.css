@@ -1,0 +1,79 @@
+:root {
+
+  --cinza1: rgb(62, 66, 75);
+
+}
+
+header {
+  align-items: center;
+  box-shadow: 0 1px 4px var(--cinza1);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+header .logo-div {
+  align-items: center;
+  display: flex;
+  font-family: Fredoka One, cursive;
+}
+
+header .logo-div img {
+  width: 100px;
+}
+
+header .email-and-expenses-value-div {
+  align-items: center;
+  background-color: rgb(50, 52, 57);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  font-family: ABeeZee, sans-serif;
+  justify-content: center;
+  padding: 4px 16px;
+}
+
+header .sum-value-div {
+  display: flex;
+}
+
+header p {
+  margin: 0;
+  text-align: center;
+}
+
+header .sum-value-div p {
+  margin: 0 2px;
+}
+
+
+header .email-field {
+  max-height: 24px;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+@media screen and ( max-width : 750px ) {
+
+  header {
+    flex-direction: column;
+    padding-bottom: 16px;
+  }
+
+}
+
+@media screen and ( max-width : 500px ) {
+
+  header .email-and-expenses-value-div {
+    border-radius: 12px;
+  }
+
+  header .sum-value-div {
+    flex-direction: column;
+  }
+
+}

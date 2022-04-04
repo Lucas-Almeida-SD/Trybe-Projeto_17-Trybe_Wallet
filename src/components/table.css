@@ -1,0 +1,93 @@
+:root {
+
+  --cinza1: rgb(62, 66, 75);
+
+  --cinza2: rgb(40, 42, 47);
+
+}
+
+.table-section {
+  margin-bottom: 24px;
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+.table-section::-webkit-scrollbar {
+  background: var(--cinza1);
+  border-radius: 50px;
+  height: 8px;
+}
+
+.table-section::-webkit-scrollbar-thumb {
+  background: var(--cinza2);
+  border-radius: 50px;
+}
+
+.table-section table {
+  font-size: 14px;
+  width: 100%;
+}
+
+.table-section table th , .table-section table td {
+  border-right: 1px solid var(--cinza2);
+}
+
+.table-section table thead {
+  background-color: rgb(125, 129, 135);
+  color: black;
+  font-family: Josefin Sans, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.table-section table tbody {
+  background-color: var(--cinza1);
+  color: rgb(200, 200, 200);
+  font-family: ABeeZee, sans-serif;
+  width: 100%;
+}
+
+.table-section table .selected {
+  background-color: rgb(50, 69, 112);
+}
+
+.table-section table thead th , .table-section table tbody td {
+  min-width: 140px;
+  padding: 8px 4px;
+  text-align: center;
+}
+
+
+.table-section table tbody td {
+  word-wrap: break-word;
+}
+
+.table-section .td-btn button {
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 2px 8px;
+  width: 60px;
+}
+
+.table-section .td-btn button:hover {
+  transform: scale(1.1);
+}
+
+.table-section .td-btn .edit-btn {
+  background-color: rgb(86, 117, 187);
+  margin-right: 8px;
+}
+
+.table-section .td-btn .remove-btn {
+  background-color: rgb(217, 64, 48);
+}
+
+.table-section .erro-currency-api {
+  color: white;
+  font-family: Fredoka One, cursive;
+  font-size: 18px;
+  margin: 16px 0;
+  text-align: center;
+}

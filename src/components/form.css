@@ -1,0 +1,90 @@
+:root {
+
+  --cinza2: rgb(40, 42, 47);
+}
+
+.form-section {
+  background-color: var(--cinza2);
+  box-sizing: border-box;
+  color: white;
+  margin-top: 16px;
+  padding: 20px;
+}
+
+.form {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form div {
+  margin: 8px 16px;
+}
+
+.form div label {
+  font-family: Acme, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.form div input , .form div select {
+  background-color: rgb(255, 255, 255, 0.8);
+  font-family: Acme, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  padding: 4px 8px;
+}
+
+.form div select {
+
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-appearance: menulist;
+}
+
+.form div input:focus , .form div select:focus {
+  box-shadow: 0 0 6px aqua;
+}
+
+.form div .value-input {
+  width: 100px;
+}
+
+.form button {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 4px black;
+  font-family: Acme, sans-serif;
+  font-size: 18px;
+  height: auto;
+  margin: 8px 16px;
+  padding: 8px 16px;
+}
+
+.form .add-btn:enabled {
+  background-color: rgb(141, 199, 61);
+}
+
+.form .edit-btn:enabled {
+  background-color: rgb(86, 117, 187);
+}
+
+.form button:enabled:hover {
+  transform: scale(1.1);
+}
+
+@media screen and ( max-width : 1000px ) {
+
+  .form {
+    flex-wrap: wrap;
+  }
+
+}
+
+@media screen and ( max-width : 550px ) {
+
+  .form div input , .form div select , .form div .value-input , .form button {
+    width: 180px;
+  }
+
+}
