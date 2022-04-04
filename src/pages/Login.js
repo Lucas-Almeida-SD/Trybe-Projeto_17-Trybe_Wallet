@@ -31,7 +31,7 @@ class Login extends React.Component {
     const { login, history } = this.props;
     const { email } = this.state;
     login(email);
-    history.push('/carteira');
+    history.push('/Trybe-Projeto_17-Trybe_Wallet/carteira');
   }
 
   validateUser(email, senha) {

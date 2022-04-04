@@ -7,8 +7,16 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route exact path="/" render={ (props) => <Login { ...props } /> } />
-        <Route path="/carteira" render={ (props) => <Wallet { ...props } /> } />
+        <Route
+          exact
+          path="/Trybe-Projeto_17-Trybe_Wallet"
+          render={ (props) => <Login { ...props } /> }
+        />
+        <Route
+          exact
+          path="/Trybe-Projeto_17-Trybe_Wallet/carteira"
+          render={ (props) => <Wallet { ...props } /> }
+        />
       </Switch>
     </div>
   );

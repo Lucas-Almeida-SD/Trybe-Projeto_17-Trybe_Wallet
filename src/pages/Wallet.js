@@ -103,7 +103,7 @@ class Wallet extends React.Component {
 
   backToLogin(email, history) {
     if (email === '') {
-      history.push('/');
+      history.push('/Trybe-Projeto_17-Trybe_Wallet');
     }
   }
 
