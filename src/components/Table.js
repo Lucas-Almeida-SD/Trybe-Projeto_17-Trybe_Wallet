@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { removeExpenseAction } from '../actions';
+import saveAtLocalStorage from '../helpers/saveAtLocalStorage';
 import './table.css';
 
 class Table extends React.Component {
   constructor(props) {
     super(props);
     this.renderTableRows = this.renderTableRows.bind(this);
+    this.removeAndSaveAtStorage = this.removeAndSaveAtStorage.bind(this);
   }
 
   getExpenseInfo(expense) {
@@ -38,9 +40,15 @@ class Table extends React.Component {
     );
   };
 
+  async removeAndSaveAtStorage(index) {
+    const { removeExpense } = this.props;
+    await removeExpense(index);
+    saveAtLocalStorage(this.props);
+  }
+
   renderTableRows() {
-    const { getExpenseInfo, convertToBrCurrency } = this;
-    const { expenses, editor, idToEdit, removeExpense, changeThisStateToEdit,
+    const { getExpenseInfo, convertToBrCurrency, removeAndSaveAtStorage } = this;
+    const { expenses, editor, idToEdit, changeThisStateToEdit,
     } = this.props;
     const n3 = 3; const n5 = 5; const n6 = 6;
     const moneyPosition = [n3, n5, n6];
@@ -71,7 +79,7 @@ class Table extends React.Component {
                     type="button"
                     className="remove-btn"
                     data-testid="delete-btn"
-                    onClick={ () => removeExpense(index) }
+                    onClick={ () => removeAndSaveAtStorage(index) }
                   >
                     Excluir
                   </button>
@@ -113,6 +121,7 @@ Table.propTypes = {
 }.isRequired;
 
 const mapStateToProps = (state) => ({
+  wallet: state.wallet,
   expenses: state.wallet.expenses,
   editor: state.wallet.editor,
   idToEdit: state.wallet.idToEdit,

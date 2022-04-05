@@ -1,5 +1,6 @@
 // Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
 import {
+  LOCAL_STORAGE,
   REQUEST_API,
   GET_API,
   FAILED_API,
@@ -28,6 +29,8 @@ function editExpenseFromState(expenses, index, payload) {
 
 const wallet = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+  case LOCAL_STORAGE:
+    return { ...state, expenses: action.payload }
   case REQUEST_API:
     return { ...state, isFetching: action.payload };
   case GET_API:
@@ -39,7 +42,6 @@ const wallet = (state = INITIAL_STATE, action) => {
   case REMOVE_EXPENSE:
     return { ...state, expenses: removeExpensesFromState(state, action.payload) };
   case EDIT_EXPENSE:
-    console.log('reducer');
     return { ...state, editor: true, idToEdit: action.payload };
   case CONFIRM_EDIT_EXPENSE:
     return {

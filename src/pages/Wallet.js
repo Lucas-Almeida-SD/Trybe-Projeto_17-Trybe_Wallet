@@ -7,11 +7,13 @@ import {
   updateExpensesAction,
   editExpenseAction,
   confirmEditExpenseAction,
+  localStorageAction,
 } from '../actions';
 import currencyApi from '../helpers/api';
 import Header from '../components/Header';
 import Form from '../components/Form';
 import Table from '../components/Table';
+import saveAtLocalStorage from '../helpers/saveAtLocalStorage';
 import './wallet.css';
 
 const ALIMENTACAO_TEXT = 'Alimentação';
@@ -28,6 +30,7 @@ class Wallet extends React.Component {
       isDisabled: true,
       errorCurrencyApi: false,
     };
+    this.localStorageToReduxState = this.localStorageToReduxState.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.validateForm = this.validateForm.bind(this);
@@ -38,6 +41,13 @@ class Wallet extends React.Component {
   componentDidMount() {
     const { fetchApi } = this.props;
     fetchApi();
+    this.localStorageToReduxState();
+  }
+
+  localStorageToReduxState() {
+    const { getLocalStorage } = this.props;
+    const expenses = JSON.parse(localStorage.getItem('expenses'));
+    return (expenses) ? getLocalStorage(expenses) : null;
   }
 
   handleChange({ target: { name, value } }) {
@@ -73,6 +83,7 @@ class Wallet extends React.Component {
         isDisabled: true,
         errorCurrencyApi: false,
       });
+      saveAtLocalStorage(this.props);
     } else { this.setState({ errorCurrencyApi: true }); }
     requestApi(false);
   }
@@ -86,11 +97,11 @@ class Wallet extends React.Component {
       () => inputValue.focus());
   }
 
-  confirmEditAndUpdateExpenses() {
+    async confirmEditAndUpdateExpenses() {
     const { confirmEditExpense } = this.props;
     const { value, description, currency, method, tag } = this.state;
     const newValue = parseFloat(value).toFixed(2);
-    confirmEditExpense({ value: newValue, description, currency, method, tag });
+    await confirmEditExpense({ value: newValue, description, currency, method, tag });
     this.setState({
       value: '',
       description: '',
@@ -99,6 +110,7 @@ class Wallet extends React.Component {
       tag: ALIMENTACAO_TEXT,
       isDisabled: true,
     });
+    saveAtLocalStorage(this.props);
   }
 
   backToLogin(email, history) {
@@ -159,6 +171,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   fetchApi: () => dispatch(fecthAction()),
+  getLocalStorage: (expenses) => dispatch(localStorageAction(expenses)),
   requestApi: (value) => dispatch(requestAction(value)),
   updateExpenses: (expense) => dispatch(updateExpensesAction(expense)),
   editExpense: (index) => dispatch(editExpenseAction(index)),

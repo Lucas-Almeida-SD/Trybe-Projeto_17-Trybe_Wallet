@@ -1,6 +1,7 @@
 // Coloque aqui suas actions
 export const LOGIN = 'LOGIN';
 export const CURRENCY = 'CURRENCY';
+export const LOCAL_STORAGE = 'LOCAL_STORAGE';
 export const REQUEST_API = 'REQUEST_API';
 export const GET_API = 'GET_API';
 export const FAILED_API = 'FAILED_API';
@@ -16,6 +17,11 @@ export const userAction = (payload) => ({
 
 export const currenciesAction = (payload) => ({
   type: CURRENCY,
+  payload,
+});
+
+export const localStorageAction = (payload) => ({
+  type: LOCAL_STORAGE,
   payload,
 });
 
