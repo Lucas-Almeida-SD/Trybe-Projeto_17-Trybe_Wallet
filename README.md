@@ -1,4 +1,7 @@
 # Projeto Trybe Wallet
+
+[Link](https://lucas-almeida-sd.github.io/Trybe-Projeto_17-Trybe_Wallet/) para a página do projeto.
+
 Esse projeto foi realizado para exercitar o que foi aprendido no Bloco 15 do Módulo de Front End do curso da [Trybe](https://www.betrybe.com/), no qual foi sobre  `Gerenciamento de estado com Redux`, sendo possível:
 
 - Criar um store Redux em aplicações React
@@ -18,8 +21,6 @@ Neste projeto foi desenolvido uma carteira de controle de gastos com conversor d
 - Adicionar, remover e editar um gasto;
 - Visualizar uma tabelas com seus gastos;
 - Visualizar o total de gastos convertidos para uma moeda de escolha;
-
-[Link](https://lucas-almeida-sd.github.io/Trybe-Projeto_17-Trybe_Wallet/) para a página do projeto.
 
 ---
 
