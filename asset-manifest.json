@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/Trybe-Projeto_17-Trybe_Wallet/static/css/main.451114ee.chunk.css",
-    "main.js": "/Trybe-Projeto_17-Trybe_Wallet/static/js/main.317b2b8c.chunk.js",
-    "main.js.map": "/Trybe-Projeto_17-Trybe_Wallet/static/js/main.317b2b8c.chunk.js.map",
+    "main.js": "/Trybe-Projeto_17-Trybe_Wallet/static/js/main.de1b522e.chunk.js",
+    "main.js.map": "/Trybe-Projeto_17-Trybe_Wallet/static/js/main.de1b522e.chunk.js.map",
     "runtime-main.js": "/Trybe-Projeto_17-Trybe_Wallet/static/js/runtime-main.4e50a13a.js",
     "runtime-main.js.map": "/Trybe-Projeto_17-Trybe_Wallet/static/js/runtime-main.4e50a13a.js.map",
-    "static/js/2.709c329c.chunk.js": "/Trybe-Projeto_17-Trybe_Wallet/static/js/2.709c329c.chunk.js",
-    "static/js/2.709c329c.chunk.js.map": "/Trybe-Projeto_17-Trybe_Wallet/static/js/2.709c329c.chunk.js.map",
+    "static/js/2.0639f181.chunk.js": "/Trybe-Projeto_17-Trybe_Wallet/static/js/2.0639f181.chunk.js",
+    "static/js/2.0639f181.chunk.js.map": "/Trybe-Projeto_17-Trybe_Wallet/static/js/2.0639f181.chunk.js.map",
     "index.html": "/Trybe-Projeto_17-Trybe_Wallet/index.html",
-    "precache-manifest.326602aa6fd4b6e807e0e0a8a41961f2.js": "/Trybe-Projeto_17-Trybe_Wallet/precache-manifest.326602aa6fd4b6e807e0e0a8a41961f2.js",
+    "precache-manifest.b44f5544411648dcc5b97fac3923a4d7.js": "/Trybe-Projeto_17-Trybe_Wallet/precache-manifest.b44f5544411648dcc5b97fac3923a4d7.js",
     "service-worker.js": "/Trybe-Projeto_17-Trybe_Wallet/service-worker.js",
     "static/css/main.451114ee.chunk.css.map": "/Trybe-Projeto_17-Trybe_Wallet/static/css/main.451114ee.chunk.css.map",
-    "static/js/2.709c329c.chunk.js.LICENSE.txt": "/Trybe-Projeto_17-Trybe_Wallet/static/js/2.709c329c.chunk.js.LICENSE.txt",
+    "static/js/2.0639f181.chunk.js.LICENSE.txt": "/Trybe-Projeto_17-Trybe_Wallet/static/js/2.0639f181.chunk.js.LICENSE.txt",
     "static/media/money.png": "/Trybe-Projeto_17-Trybe_Wallet/static/media/money.25ea97be.png"
   },
   "entrypoints": [
     "static/js/runtime-main.4e50a13a.js",
-    "static/js/2.709c329c.chunk.js",
+    "static/js/2.0639f181.chunk.js",
     "static/css/main.451114ee.chunk.css",
-    "static/js/main.317b2b8c.chunk.js"
+    "static/js/main.de1b522e.chunk.js"
   ]
 }
